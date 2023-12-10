@@ -74,11 +74,11 @@ const Medium = () => {
         {/* welcome */}
         <div className="flex flex-row  gap-0 w-screen  relative pb-4">
           {/* sidebar */}
-          <div className="bg-[#32a8a4] w-7 mr-8 -mb-11"></div>
+          <div className="bg-[#32a8a4] w-7 mr-0 -mb-11"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 w-full relative overflow-x-hidden">
             {/* language */}
-            <div className="flex flex-col gap-2 w-1/2 mt-8">
+            <div className="flex flex-col gap-2 w-1/2 mt-8 ml-2">
               <div className="flex flex-row  gap-2 w-full  ">
                 <h1 className="text-black font-bold text-2xl">{t("lang")}</h1>
                 <button
@@ -154,7 +154,7 @@ const Medium = () => {
               {/* desc start */}
               {i18n.language === "en" ? (
                 <>
-                  <div
+                  {/* <div
                     className={`  ${
                       i18n.language === "AR" ? "mb-10 w-full" : "w-full"
                     } relative overflow-x-hidden overflow-y-hidden  `}
@@ -173,6 +173,13 @@ const Medium = () => {
                     >
                       {t("desc")}.
                     </p>
+                  </div> */}
+                  <div className="mt-36 mr-0 w-[100%] h-[100%] flex flex-col items-center justify-center">
+                    <img
+                      src="./assets/mob desc.png"
+                      alt="arabic description"
+                      className="w-[100%] h-[100%] object-fill"
+                    />
                   </div>
                 </>
               ) : (
