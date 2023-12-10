@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.last {
+  @media only screen and (max-width: 700px) {
+    display: block;
+  }
+}
+.middles {
+  @media only screen and (max-width: 700px) {
+    display: block;
+  }
+}
