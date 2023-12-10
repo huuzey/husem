@@ -70,16 +70,16 @@ const Medium = () => {
 
   return (
     <div>
-      <div className="flex  justify-between gap-4 w-full flex-col  xs:mb-24 md:mb-0">
+      <div className="flex  justify-between gap-4 h-screen w-screen flex-col overflow-x-hidden   xs:mb-24 md:mb-0">
         {/* welcome */}
-        <div className="flex flex-row gap-0 w-full relative pb-4">
+        <div className="flex flex-row  gap-0 w-screen  relative pb-4">
           {/* sidebar */}
-          <div className="bg-[#32a8a4] w-9 mr-8 -mb-11"></div>
+          <div className="bg-[#32a8a4] w-7 mr-8 -mb-11"></div>
 
-          <div className="flex flex-row w-full relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 w-full relative overflow-x-hidden">
             {/* language */}
-            <div className="flex flex-col gap-12 w-1/2 mt-8">
-              <div className="flex flex-row gap-2 w-full  ">
+            <div className="flex flex-col gap-2 w-1/2 mt-8">
+              <div className="flex flex-row  gap-2 w-full  ">
                 <h1 className="text-black font-bold text-2xl">{t("lang")}</h1>
                 <button
                   onClick={() => {
@@ -99,11 +99,17 @@ const Medium = () => {
                 </button>
                 <a
                   href="/form"
-                  className="border-[3.5px] text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
+                  className="border-[3.5px] hidden sm:flex text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20  items-center justify-center"
                 >
                   Form
                 </a>
               </div>
+              <a
+                href="/form"
+                className="border-[3.5px] mt-3 sm:hidden flex text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20  items-center justify-center"
+              >
+                Form
+              </a>
               <div className=" ">
                 <div className="hidden sm:flex">
                   <img
@@ -120,7 +126,7 @@ const Medium = () => {
             </div>
             {/* seeting */}
             <div
-              className={`flex flex-col mt-10  ${
+              className={`flex flex-col mt-2  ${
                 i18n.language === "AR" ? "w-full" : "w-1/2"
               }`}
             >
@@ -130,7 +136,7 @@ const Medium = () => {
                 } mb-16 flex flex-row`}
               >
                 {" "}
-                <p className="font-bold sm:text-lg md:text-4xl mt-20 absolute right-[23%]">
+                <p className="font-bold text-lg md:text-4xl mt-8 sm:mt-24 absolute right-[23%]">
                   {t("welcome")}
                   <span className="absolute right-[3%] ">
                     <br className="absolute right-[3%] " />
@@ -150,8 +156,8 @@ const Medium = () => {
                 <>
                   <div
                     className={`  ${
-                      i18n.language === "AR" ? "mb-10 w-full" : ""
-                    } relative overflow-x-hidden overflow-y-hidden mr-0`}
+                      i18n.language === "AR" ? "mb-10 w-full" : "w-full"
+                    } relative overflow-x-hidden overflow-y-hidden  `}
                   >
                     <div
                       className={`bg-[#95bcbf] rounded-full w-[290px] h-[290px] ${
@@ -161,9 +167,9 @@ const Medium = () => {
                       } absolute  -right-36 bottom-0 -z-30 `}
                     ></div>
                     <p
-                      className={`md:text-2xl md:font-medium sm:text-xs sm:font-normal tracking-wide sm:leading-5 md:leading-[55px] ${
+                      className={`  text-xs font-normal tracking-wide leading-5  ${
                         i18n.language === "AR" ? "md:leading-[55px]" : ""
-                      }} mt-36 z-50	`}
+                      }} mt-36 z-50 	`}
                     >
                       {t("desc")}.
                     </p>
@@ -369,7 +375,7 @@ const Medium = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* suggestion */}
-            <div className="flex flex-col  w-full   ">
+            <div className="flex flex-col  items-center justify-center   ">
               <p className="text-black font-semibold text-lg mb-7">
                 {i18n.language === "AR" ? (
                   <div className="flex flex-row">
