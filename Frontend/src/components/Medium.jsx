@@ -105,7 +105,7 @@ const Medium = () => {
                 </a>
               </div>
               <div className=" ">
-                <div>
+                <div className="hidden sm:flex">
                   <img
                     src="./assets/pic2.png"
                     alt="welcome "
@@ -185,7 +185,7 @@ const Medium = () => {
           </div>
         </div>
         {/* circle */}
-        <div className="flex flex-col justify-center items-center relative     ">
+        <div className="hidden sm:flex flex-col justify-center items-center relative     ">
           <div className="flex flex-col justify-center items-center relative    ">
             {i18n.language === "en" ? (
               <>
@@ -209,11 +209,11 @@ const Medium = () => {
         <div className="flex flex-row w-full mt-10  ">
           {/* sidebar */}
 
-          <div className="bg-[#32a8a4] w-20 ml-0 -mb-11"></div>
+          <div className="bg-[#32a8a4] w-12  ml-0 -mb-11"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* image */}
-            <div className="w-full ">
+            <div className="w-full hidden sm:flex ">
               <img
                 src="./assets/pic1.png"
                 alt="welcome "
@@ -341,8 +341,8 @@ const Medium = () => {
         </div>
 
         {/* circle */}
-        <div className="flex flex-col justify-center items-center relative     ">
-          <div className="flex flex-col justify-center items-center relative    ">
+        <div className=" hidden sm:flex flex-col justify-center items-center relative     ">
+          <div className=" flex flex-col justify-center items-center relative    ">
             {i18n.language === "en" ? (
               <>
                 <img
@@ -363,7 +363,7 @@ const Medium = () => {
           </div>{" "}
         </div>
         {/* suggestion */}
-        <div className=" flex flex-row  w-full gap-3">
+        <div className=" flex flex-row  w-full gap-3 mt-16 sm:mt-0">
           {/* sidebar */}
           <div className="bg-[#32a8a4] w-10  -mb-11"></div>
 
@@ -414,7 +414,7 @@ const Medium = () => {
               </button>
             </div>
             {/* image */}
-            <div className="w-full  ">
+            <div className="w-full hidden sm:flex  ">
               <img
                 src="./assets/pic3.png"
                 alt="welcome "
