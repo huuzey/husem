@@ -368,7 +368,7 @@ const Medium = () => {
                     </>
                   )}
                 </p>
-                <div className=" flex flex-row gap-2 mt-2 items-center justify-around h-fit   w-[100%]">
+                <div className=" grid grid-cols-4 gap-2 mt-2 items-center justify-around h-fit   w-[100%]">
                   <Satisfaction
                     pic="./assets/sat very.png"
                     title={t("t9")}
@@ -540,7 +540,7 @@ const Medium = () => {
               <button
                 onClick={submiteval}
                 class="subunder"
-                className="text-black  border-2 w-1/2 mt-5 py-4  md:px-0 text-lg font-bold  border-black bg-[#32a8a4]  flex justify-center items-center rounded-full"
+                className="text-black mb-48 sm:mb-0 border-2 w-1/2 mt-5 py-4  md:px-0 text-lg font-bold  border-black bg-[#32a8a4]  flex justify-center items-center rounded-full"
               >
                 {t("submit")}
               </button>
