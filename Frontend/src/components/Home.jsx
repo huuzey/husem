@@ -393,13 +393,13 @@ const Home = () => {
                 <>{t("suggest")}</>
               )}
             </p>
-            <input
+            <textarea
               type="text"
               value={suggestion}
               onChange={(e) => {
                 setSuggestion(e.target.value);
               }}
-              className="border-4 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
+              className="border-4 w-full mr-2 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
             />
             <p className="text-black font-semibold text-lg mb-7">
               {i18n.language === "AR" ? (
@@ -411,13 +411,13 @@ const Home = () => {
                 <>{t("weak")}</>
               )}
             </p>{" "}
-            <input
+            <textarea
               type="text"
               value={weaknesses}
               onChange={(e) => {
                 setWeaknesses(e.target.value);
               }}
-              className="border-4 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
+              className="border-4 w-full mr-2 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
             />
             <button
               onClick={submiteval}
@@ -436,11 +436,11 @@ const Home = () => {
           />
         </div>
 
-        <div className="flex items-center flex-col justify-center  ">
+        {/* <div className="flex items-center flex-col justify-center  ">
           <div className="w-4 h-4 rounded-full border-4 border-[#32a8a4]"></div>
           <div className="w-1 h-56  bg-[#32a8a4]"></div>
           <div className="w-full bg-[#0f080a] h-16 mt-0 "></div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
