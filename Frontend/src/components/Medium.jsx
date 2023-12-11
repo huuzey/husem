@@ -23,7 +23,7 @@ i18n
         translation: tAR,
       },
     },
-    lng: "en", // if you're using a language detector, do not define the lng option
+    lng: "AR", // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
 
     interpolation: {
@@ -97,21 +97,10 @@ const Medium = () => {
                 >
                   عربي
                 </button>
-                <a
-                  href="/form"
-                  className="border-[3.5px] hidden sm:flex text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20  items-center justify-center"
-                >
-                  Form
-                </a>
               </div>
-              <a
-                href="/form"
-                className="border-[3.5px] mt-3 sm:hidden flex text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20  items-center justify-center"
-              >
-                Form
-              </a>
+
               <div className=" ">
-                <div className="hidden sm:flex">
+                <div className="hidden ">
                   <img
                     src="./assets/pic2.png"
                     alt="welcome "
@@ -126,29 +115,26 @@ const Medium = () => {
             </div>
             {/* seeting */}
             <div
-              className={`flex flex-col mt-2  ${
+              className={`hidden  flex-col mt-2  ${
                 i18n.language === "AR" ? "w-full" : "w-1/2"
               }`}
             >
               <div
                 className={` ${
-                  i18n.language === "AR" ? "mb-24" : ""
-                } mb-16 flex flex-row`}
+                  i18n.language === "AR" ? "" : "justify-end items-end"
+                }  flex flex-row  gap-x-4 mt-5`}
               >
                 {" "}
-                <p className="font-bold text-lg md:text-4xl mt-8 sm:mt-24 absolute right-[23%]">
+                <img
+                  src="./assets/viv.png"
+                  alt="welcome "
+                  className={`w-[20%] h-[80px] ${
+                    i18n.language === "AR" ? "mt-2 " : ""
+                  }     rounded-2xl  mt-14`}
+                />
+                <p className="font-bold text-base w-full  mt-8  ">
                   {t("welcome")}
-                  <span className="absolute right-[3%] ">
-                    <br className="absolute right-[3%] " />
-                    {t("satis")}
-                  </span>
-                  <img
-                    src="./assets/viv.png"
-                    alt="welcome "
-                    className={`w-[20%] h-[80px] ${
-                      i18n.language === "AR" ? "mt-2 " : ""
-                    }     rounded-2xl`}
-                  />
+                  {t("satis")}
                 </p>
               </div>
               {/* desc start */}
@@ -195,8 +181,140 @@ const Medium = () => {
               )}
               {/* desc end */}
             </div>
+            {/* seeting mobile */}
+            <div className="flex h-[20vh] sm:hidden flex-row items-center mx-3 justify-around gap-4 w-full">
+              <img
+                src="./assets/viv.png"
+                alt="welcome "
+                className={` h-1/2 aspect-[4/5] ${
+                  i18n.language === "AR" ? "mt-2 " : ""
+                }     rounded-2xl`}
+              />
+              <p className="font-bold text-xs  mt-8 w-3/4   ">
+                {t("welcome")}
+                <span className=" ">
+                  <br className=" " />
+                  {t("satis")}
+                </span>{" "}
+              </p>
+            </div>
           </div>
         </div>
+        {/* welcome medium */}
+        <div className="sm:flex h-[20vh] hidden flex-row items-center mx-3 justify-around gap-4 w-full">
+          <div className="bg-[#32a8a4] w-8 mr-0 "></div>
+
+          <img
+            src="./assets/viv.png"
+            alt="welcome "
+            className={` h-1/2 aspect-[4/5] ${
+              i18n.language === "AR" ? "mt-2 " : ""
+            }     rounded-2xl`}
+          />
+          <p className="font-bold text-xl  mt-8 w-3/4   ">
+            {t("welcome")}
+            <span className=" ">
+              <br className=" " />
+              {t("satis")}
+            </span>{" "}
+          </p>
+        </div>
+        {/* mobile description */}
+        <div className="flex sm:hidden">
+          <div>
+            {i18n.language === "en" ? (
+              <>
+                {" "}
+                <div className="mt-6   w-[90%] h-[100%]  flex flex-col items-center justify-center">
+                  <img
+                    src="./assets/mob desc.png"
+                    alt="arabic description"
+                    className="w-[100%] h-[100%] object-fill"
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="mt-6 w-[100%] h-[100%] flex flex-col items-center justify-center">
+                  <img
+                    src="./assets/ARB.png"
+                    alt="arabic description"
+                    className="w-[100%] h-[100%] object-fill"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* desc medium eng */}
+        <div className="hidden sm:flex">
+          <div>
+            {i18n.language === "en" && (
+              <>
+                {" "}
+                <div className="mt-6   w-[90%] h-[100%]  flex flex-col items-center justify-center">
+                  <img
+                    src="./assets/mob desc.png"
+                    alt="arabic description"
+                    className="w-[100%] h-[100%] object-fill"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+          <div>
+            {/* pic2 medium */}
+            <div
+              className={`hidden sm:flex ${
+                i18n.language === "AR" ? "hidden" : ""
+              } `}
+            >
+              <img
+                src="./assets/pic2.png"
+                alt="welcome "
+                className={` ${
+                  i18n.language === "AR" ? "hidden" : "w-[80%] h-[180px]"
+                }      rounded-2xl mt-40`}
+              />
+            </div>
+          </div>
+        </div>
+        {/* arabic medium desc */}
+        <div className="hidden sm:flex flex-row justify-center items-center">
+          <div>
+            {/* pic2 medium */}
+            <div
+              className={`hidden sm:flex ${
+                i18n.language === "AR" ? "flex" : "hidden"
+              } `}
+            >
+              <img
+                src="./assets/pic2.png"
+                alt="welcome "
+                className={` ${
+                  i18n.language === "AR" ? "flex w-full h-full " : "hidden"
+                }      rounded-2xl mt-4`}
+              />
+            </div>
+          </div>
+          <div>
+            {i18n.language === "AR" && (
+              <>
+                {" "}
+                <div className="mt-6   w-[100%] h-[100%]  flex flex-col items-center justify-center">
+                  <img
+                    src="./assets/ARB.png"
+                    alt="arabic description"
+                    className="w-[100%] h-[100%] object-fill"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* desc end */}
         {/* circle */}
         <div className="hidden sm:flex flex-col justify-center items-center relative     ">
           <div className="flex flex-col justify-center items-center relative    ">
@@ -385,7 +503,7 @@ const Medium = () => {
             <div className="flex flex-col  items-center justify-center   ">
               <p className="text-black font-semibold text-lg mb-7">
                 {i18n.language === "AR" ? (
-                  <div className="flex flex-row">
+                  <div className="flex flex-row mr-1">
                     <p> ما هي الاقتراحات التي لديك لتحسين خدماتنا؟ </p>
                     <p>.4</p>
                   </div>
@@ -393,17 +511,17 @@ const Medium = () => {
                   <>{t("suggest")}</>
                 )}
               </p>
-              <input
+              <textarea
                 type="text"
                 value={suggestion}
                 onChange={(e) => {
                   setSuggestion(e.target.value);
                 }}
-                className="border-4 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
+                className="border-4 w-full mr-2 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
               />
               <p className="text-black font-semibold text-lg mb-7">
                 {i18n.language === "AR" ? (
-                  <div className="flex flex-row">
+                  <div className="flex flex-row mr-1">
                     <p> ما هي نقاط الضعف التي تلاحظها في خدماتنا؟ </p>
                     <p>.5</p>
                   </div>
@@ -411,17 +529,18 @@ const Medium = () => {
                   <>{t("weak")}</>
                 )}
               </p>{" "}
-              <input
+              <textarea
                 type="text"
                 value={weaknesses}
                 onChange={(e) => {
                   setWeaknesses(e.target.value);
                 }}
-                className="border-4 border-[#32a8a4] py-12 px-8 rounded-3xl text-[#32a8a4] "
+                className="border-4 border-[#32a8a4] py-12 px-8 w-full mr-2 rounded-3xl text-[#32a8a4] "
               />
               <button
                 onClick={submiteval}
-                className="text-black border-2 w-1/2 mt-5 py-4  md:px-0 text-lg font-bold  border-black bg-[#32a8a4]  flex justify-center items-center rounded-full"
+                class="subunder"
+                className="text-black mb-48 sm:mb-0 border-2 w-1/2 mt-5 py-4  md:px-0 text-lg font-bold  border-black bg-[#32a8a4]  flex justify-center items-center rounded-full"
               >
                 {t("submit")}
               </button>
@@ -438,11 +557,11 @@ const Medium = () => {
         </div>
         {/* thank you */}
 
-        <div className="flex items-center flex-col justify-center mb-44 sm:mb-0  ">
+        {/* <div className="flex items-center flex-col justify-center mb-44 sm:mb-0  ">
           <div className="w-4 h-4 rounded-full border-4 border-[#32a8a4]"></div>
           <div className="w-1 h-56  bg-[#32a8a4]"></div>
           <div className="w-full bg-[#0f080a] h-16 mt-0 "></div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
