@@ -24,7 +24,7 @@ i18n
         translation: tAR,
       },
     },
-    lng: "AR", // if you're using a language detector, do not define the lng option
+    lng: "en", // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
 
     interpolation: {
@@ -78,38 +78,61 @@ const Home = () => {
         {/* welcome */}
         <div className="flex flex-row gap-0 w-full relative pb-4">
           {/* sidebar */}
-          <div className="bg-[#32a8a4] w-9 mr-8 -mb-11"></div>
+          <div className="bg-[#32a8a4] w-9  -mb-11"></div>
 
-          <div className="flex flex-row w-full relative">
-            {/* language */}
-            <div className="flex flex-col gap-12 w-1/2 mt-8">
-              <div className="flex flex-row gap-2 w-full  ">
-                <h1 className="text-black font-bold text-2xl">{t("lang")}</h1>
-                <button
-                  onClick={() => {
-                    i18n.changeLanguage("en");
-                  }}
-                  className="border-[3.5px]  text-xl px-2 hover:bg-[#32a8a4] hover:scale-105  border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
-                >
-                  Eng
-                </button>
-                <button
-                  onClick={() => {
-                    i18n.changeLanguage("AR");
-                  }}
-                  className="border-[3.5px] text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
-                >
-                  عربي
-                </button>
-               {/*  {!url && (
+          <div className="flex flex-col w-full relative">
+            {/* language  start*/}
+            <div className="flex flex-row pl-4 gap-2 w-full mt-4  ">
+              <h1 className="text-black font-bold text-2xl">{t("lang")}</h1>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("en");
+                }}
+                className="border-[3.5px]  text-xl px-2 hover:bg-[#32a8a4] hover:scale-105  border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
+              >
+                Eng
+              </button>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("AR");
+                }}
+                className="border-[3.5px] text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
+              >
+                عربي
+              </button>
+              {/* {!url && (
                   <a
                     href="/form"
                     className="border-[3.5px] text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
                   >
                     Form
                   </a>
-                )}*/}
-              </div>
+                )} */}
+            </div>
+            {/* language end*/}
+            {/* welcome start*/}
+            <div
+              className={` ${
+                i18n.language === "AR" ? "mb-10" : ""
+              } my-2 flex flex-row justify-around items-center`}
+            >
+              <img
+                src="./assets/viv.png"
+                alt="welcome "
+                className={`h-1/2 aspect-[4/5] ${
+                  i18n.language === "AR" ? " " : ""
+                }     rounded-2xl`}
+              />
+              <p className="font-bold text-4xl  ">
+                {t("welcome")}
+                <span className=" ">
+                  <br className=" " />
+                  {t("satis")}
+                </span>
+              </p>
+            </div>
+            {/* welcome end*/}
+            {/* <div className="flex flex-col gap-12 w-1/2 mt-8">
               <div className=" ">
                 <div>
                   <img
@@ -123,71 +146,80 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* seeting */}
-            <div
-              className={`flex flex-col mt-10  ${
-                i18n.language === "AR" ? "w-full" : "w-1/2"
-              }`}
-            >
-              <div
-                className={` ${
-                  i18n.language === "AR" ? "mb-24" : ""
-                } mb-16 flex flex-row`}
-              >
-                {" "}
-                <p className="font-bold sm:text-lg md:text-4xl mt-20 absolute right-[23%]">
-                  {t("welcome")}
-                  <span className="absolute right-[3%] ">
-                    <br className="absolute right-[3%] " />
-                    {t("satis")}
-                  </span>
-                  <img
-                    src="./assets/viv.png"
-                    alt="welcome "
-                    className={`w-[20%] h-[80px] ${
-                      i18n.language === "AR" ? "mt-2 " : ""
-                    }     rounded-2xl`}
-                  />
-                </p>
-              </div>
-              {/* desc start */}
-              {i18n.language === "en" ? (
-                <>
+            {/* desc start */}
+            {/* arb desc start */}
+            {i18n.language === "AR" && (
+              <div className="flex flex-row justify-center items-center">
+                <div>
+                  {/* pic2 medium */}
                   <div
-                    className={`  ${
-                      i18n.language === "AR" ? "mb-10" : ""
-                    } relative overflow-x-hidden overflow-y-hidden mr-0`}
+                    className={`flex ${
+                      i18n.language === "AR" ? "flex" : "hidden"
+                    } `}
                   >
-                    <div
-                      className={`bg-[#75c9c1] rounded-full w-[390px] h-[390px] ${
-                        i18n.language === "AR"
-                          ? " h-[315px] w-[315px] top-6 md:-right-28"
-                          : ""
-                      } absolute md:-right-44 sm:-right-0 bottom-0 -z-30 `}
-                    ></div>
-                    <p
-                      className={`md:text-2xl md:font-medium sm:text-xs sm:font-normal tracking-wide sm:leading-5 md:leading-[55px] ${
-                        i18n.language === "AR" ? "md:leading-[55px]" : ""
-                      }} mt-36 z-50	`}
-                    >
-                      {t("desc")}.
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="mt-14 w-full">
                     <img
-                      src="./assets/ARB.png"
-                      alt="arabic description"
-                      className="w-full"
+                      src="./assets/pic2.png"
+                      alt="welcome "
+                      className={` ${
+                        i18n.language === "AR"
+                          ? "flex w-full h-full "
+                          : "hidden"
+                      }      rounded-2xl mt-4`}
                     />
                   </div>
-                </>
-              )}
-              {/* desc end */}
-            </div>
+                </div>
+                <div>
+                  {i18n.language === "AR" && (
+                    <>
+                      {" "}
+                      <div className="mt-1   w-[100%] h-[100%]  flex flex-col items-center justify-center">
+                        <img
+                          src="./assets/ARB.png"
+                          alt="arabic description"
+                          className="w-[100%] h-[100%] object-fill"
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+            {/* eng desc start */}
+            {i18n.language === "en" && (
+              <div className="flex flex-row justify-center items-center">
+                <div>
+                  {i18n.language === "en" && (
+                    <>
+                      {" "}
+                      <div className="mt-1   w-[100%] h-[100%]  flex flex-col items-start justify-start">
+                        <img
+                          src="./assets/mob desc.png"
+                          alt="arabic description"
+                          className="w-[100%] h-[100%] object-fill"
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
+                <div>
+                  {/* pic2 medium */}
+                  <div
+                    className={` ${i18n.language === "AR" ? "hidden" : ""} `}
+                  >
+                    <img
+                      src="./assets/pic2.png"
+                      alt="welcome "
+                      className={` ${
+                        i18n.language === "AR" ? "hidden" : "flex w-full h-full"
+                      }      rounded-2xl mt-4`}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* desc end */}
           </div>
         </div>
         {/* circle */}
@@ -228,7 +260,7 @@ const Home = () => {
                   </>
                 )}
               </p>
-              <div className=" flex flex-row gap-2 mt-2 items-center justify-around h-fit   w-[100%]">
+              <div className=" grid-cols-4 grid gap-2 mt-2 items-start justify-start h-fit   w-[100%]">
                 <Satisfaction
                   pic="./assets/sat very.png"
                   title={t("t9")}
