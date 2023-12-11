@@ -540,7 +540,7 @@ const Medium = () => {
               <button
                 onClick={submiteval}
                 class="subunder"
-                className="text-black mb-48 sm:mb-0 border-2 w-1/2 mt-5 py-4  md:px-0 text-lg font-bold  border-black bg-[#32a8a4]  flex justify-center items-center rounded-full"
+                className="text-black  border-2 w-1/2 mt-5 py-4  md:px-0 text-lg font-bold  border-black bg-[#32a8a4]  flex justify-center items-center rounded-full"
               >
                 {t("submit")}
               </button>
