@@ -14,7 +14,7 @@ const Satisfaction = (props) => {
           fun(value);
         }}
         className={`${
-          back ? "bg-green-600" : ""
+          back ? "bg-[#c40a7d]" : ""
         }   text-white border-2  sm:px-1 md:px-0 flex items-center  justify-center text-[9px] md:text-[10px] sm:font-light md:font-semibold py-1 border-black bg-[#32a8a4]   rounded-full`}
       >
         {title}
