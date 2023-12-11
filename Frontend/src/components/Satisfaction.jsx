@@ -15,7 +15,7 @@ const Satisfaction = (props) => {
         }}
         className={` ${
           back ? "bg-[#c40a7d]" : ""
-        } text-white border-2  sm:px-1 md:px-0 flex items-center  justify-center sm:text-[3px] md:text-[10px] sm:font-light md:font-semibold py-1 border-black bg-[#32a8a4]   rounded-full`}
+        } text-white border-2  w-3/4 flex items-center  justify-center sm:text-[3px] md:text-[10px] sm:font-light md:font-semibold py-1 border-black bg-[#32a8a4]   rounded-full`}
       >
         {title}
       </button>
