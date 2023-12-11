@@ -101,14 +101,14 @@ const Home = () => {
                 >
                   عربي
                 </button>
-                {!url && (
+               {/*  {!url && (
                   <a
                     href="/form"
                     className="border-[3.5px] text-xl px-2 hover:bg-[#32a8a4] hover:scale-105 border-[#32a8a4] h-11 rounded-2xl w-20 flex items-center justify-center"
                   >
                     Form
                   </a>
-                )}
+                )}*/}
               </div>
               <div className=" ">
                 <div>
