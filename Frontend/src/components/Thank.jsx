@@ -47,9 +47,9 @@ const Thank = () => {
         </p>
       </div>
       <div className="flex items-center flex-col justify-center mb-44 md:mb-0  ">
-        <div className="w-4 h-4 rounded-full border-4 border-[#32a8a4]"></div>
+        {/* <div className="w-4 h-4 rounded-full border-4 border-[#32a8a4]"></div>
         <div className="w-1 h-56  bg-[#32a8a4]"></div>
-        <div className="w-full bg-[#0f080a] h-16 mt-0 "></div>
+        <div className="w-full bg-[#0f080a] h-16 mt-0 "></div> */}
       </div>
     </div>
   );
