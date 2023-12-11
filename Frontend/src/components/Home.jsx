@@ -260,7 +260,7 @@ const Home = () => {
                   </>
                 )}
               </p>
-              <div className=" grid-cols-4 grid gap-2 mt-2 items-start justify-start h-fit   w-[100%]">
+              <div className=" grid-cols-4 grid gap-2 mt-2 items-center justify-center h-fit   w-[100%]">
                 <Satisfaction
                   pic="./assets/sat very.png"
                   title={t("t9")}
@@ -365,7 +365,7 @@ const Home = () => {
             <img
               src="./assets/pic1.png"
               alt="welcome "
-              className="w-[90%]  md:h-[280px]    rounded-2xl mt-40"
+              className="aspect-[4/5] h-2/3 w-full   rounded-2xl mt-4"
             />
           </div>
           {/* sidebar */}
@@ -400,7 +400,7 @@ const Home = () => {
             <img
               src="./assets/pic3.png"
               alt="welcome "
-              className="w-[85%] h-[280px]    rounded-2xl mt-40"
+              className="aspect-[4/5] h-2/3 w-full   rounded-2xl mt-40"
             />
           </div>
           {/* sidebar */}
@@ -410,7 +410,7 @@ const Home = () => {
             <img
               src="./assets/pic3.png"
               alt="welcome "
-              className="w-[85%] h-[280px]    rounded-2xl mt-40"
+              className="aspect-[4/5] h-2/3 w-full    rounded-2xl mt-40"
             />
           </div>
           {/* suggestion */}
